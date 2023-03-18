@@ -1,0 +1,16 @@
+﻿@model AlumnoViewModel ;
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center row justify-content-center align-items-center pb-3">
+  
+    <h1 class="display-6 col-auto ">Lista De Alumnos</h1>
+    <a href="Home/Crear/" class="btn btn-success col-auto BotonCrear ">Crear Alumno</a>
+    
+</div>
+
+
+@Html.Partial("_Alumnos")

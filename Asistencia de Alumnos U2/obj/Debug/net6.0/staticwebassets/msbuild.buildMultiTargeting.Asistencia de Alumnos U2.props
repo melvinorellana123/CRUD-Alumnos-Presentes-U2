@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Asistencia de Alumnos U2.props" />
+</Project>

@@ -1,0 +1,31 @@
+﻿@model Alumno
+
+<div  class="row p-5 mb-4 " id="formularioContainerCrear">
+    <form method="post"asp-action="Crear">
+        <div class=" col-auto bg-success text-light">
+            <h3 class="text-center">Crear Nuevo Alumno</h3>
+        </div>
+        <div class="row gap-3 justify-content-center">
+            <div class="col-6">
+                <label for="Nombre" class="form-label m-2">Nombre del Alumno</label>
+                <input name="Nombre" asp-for="Nombre" type="text" class="form-control"/>
+            </div>
+
+            <div class="col-6">
+                <div class="form-check form-switch">
+                    <input name="Asistencia" asp-for="Asistencia" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Presente</label>
+                </div>
+            </div>
+            
+            <div class="col-6 d-flex justify-content-center gap-2 ">
+                <button type="submit"  class=" btn btn-success d-block">Crear</button>
+                <a href="/" class="btn btn-danger d-block">Cancelar</a>
+            </div>
+        
+            
+            
+
+        </div>
+    </form>
+</div>

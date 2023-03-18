@@ -1,0 +1,36 @@
+﻿@model AlumnoViewModel
+<div class="row justify-content-center  gap-4 mb-5 mt-3">
+   @if (Model.alumnos.Count() == 0)
+   {
+      <h5 class="text-center">Aun no se ha creado ningun alumno</h5>
+   }
+   else
+   {
+      @foreach (Alumno alumno in Model.alumnos)
+      {
+         <div class="card pt-3 col-3 @(alumno.Asistencia? "card-presente" :  "card-ausente" ) "  style="width: 18rem;">
+            <div class=" row justify-content-center">
+               <img src="/Images/perfil.png" class="card-img w-50" alt="Imagen de Tarea">
+            </div>
+            <div class="card-body">
+               <h5 class="card-title">@alumno.Nombre</h5>
+               <div class="form-check form-switch">
+
+                  <input name="Asistencia"disabled="disabled"   class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked="@alumno.Asistencia">
+                  @if (alumno.Asistencia )
+                  {
+                     <p> Presente</p>
+                  }
+                  else
+                  {
+                     <p>Ausente</p>
+                  }
+               </div>
+
+               <a href="Home/Editar/@alumno.Id" class="btn btn-primary">Editar</a>
+               <a href="Home/Eliminar/@alumno.Id" class="btn btn-danger">Eliminar</a>
+            </div>
+         </div>
+      }
+   }
+</div>

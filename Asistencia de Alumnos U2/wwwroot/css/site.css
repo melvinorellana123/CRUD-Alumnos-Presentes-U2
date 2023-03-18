@@ -1,0 +1,57 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.BotonCrear{
+  transition: .5s;
+}
+.BotonCrear:hover{
+  transform: scale(1.05);
+}
+.card-presente{
+  box-shadow: rgba(13, 109, 251, 0.54) 15px 10px 25px;
+  transition: .3s;
+}
+.card-ausente{
+  box-shadow: rgba(255, 31, 31, 0.54) 15px 10px 25px;
+  transition: .3s;
+}
+.card-presente:hover  {
+
+  transform: scale(1.05);
+
+}
+.card-ausente:hover  {
+  
+  transform: scale(1.05);
+
+}
+#formularioContainerCrear{
+  border-radius: 10px;
+  box-shadow: rgba(25, 134, 83, 0.43) 0px 0px 50px;
+
+}
+
+#formularioContainerEditar{
+  border-radius: 10px;
+  box-shadow: rgba(13, 109, 251, 0.54) 0px 0px 50px;
+
+}
+
+#index{
+  min-height: 82vh;
+}
